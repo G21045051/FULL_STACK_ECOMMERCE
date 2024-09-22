@@ -22,6 +22,11 @@ const PORT = process.env.PORT || 5000;
 const __dirname = path.resolve();
 
 
+app.get('/', (req, res) => {
+	console.log("welcome");         // Log "welcome" to the console
+	res.send("Welcome to the home page!");  // Send a response back to the client
+});
+
 app.use(cors({
 	origin: 'http://localhost:5173', // Allow requests from your frontend
 	credentials: true, // Allow cookies to be sent
